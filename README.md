@@ -14,7 +14,7 @@ npm install tap-given
 
 ### Usage
 
-__Given__ example test file:
+__Given__ `examples/test.js` file:
 
 ```js
 /* global scenario, given, when, then */
@@ -40,13 +40,13 @@ scenario('Given-When-Then scenario', function () {
 __When__ I run `tap` command:
 
 ```sh
-$ -R spec tap example.js
+$ tap -R spec examples/test.js
 ```
 
 __Then__ following output is produced:
 
 ```
-example/test.js
+examples/test.js
   Given-When-Then scenario
     ✓ Given some property in current context
     ✓ When I do something with the property in current context
