@@ -14,7 +14,7 @@ npm install tap-given
 
 ### Usage
 
-*Given* example test file:
+__Given__ example test file:
 
 ```js
 /* global scenario, given, when, then */
@@ -37,13 +37,13 @@ scenario('Given-When-Then scenario', function () {
 })
 ```
 
-*When* I run `tap` command:
+__When__ I run `tap` command:
 
 ```sh
 $ -R spec tap example.js
 ```
 
-*Then* following output is produced:
+__Then__ following output is produced:
 
 ```
 example/test.js
