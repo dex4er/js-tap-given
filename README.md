@@ -14,26 +14,55 @@ npm install tap-given
 
 ### Usage
 
+Given example test file:
+
 ```js
 /* global scenario, given, when, then */
 require('tap-given')
 require('chai').should()
 
-scenario('given-when-then basic scenario', function () {
+scenario('Given-When-Then scenario', function () {
   given('some property in current context', () => {
     this.property = 42
   })
 
-  when('I do something with property in current context', () => {
+  when('I do something with the property in current context', () => {
     this.property /= 2
   })
 
-  then('property in current context has correct value', done => {
+  then('the property in current context has correct value', done => {
     this.property.should.equal(21)
     done()
   })
 })
 ```
+
+When I run `tap` command:
+
+```sh
+$ -R spec tap example.js
+```
+
+Then following output is produced:
+
+```
+example/test.js
+  Given-When-Then scenario
+    ✓ Given some property in current context
+    ✓ When I do something with the property in current context
+    ✓ Then the property in current context has correct value
+
+
+  3 passing (230.343ms)
+```
+
+### Functions
+
+`scenario` function is an alias to `context` function.
+
+`given`, `when` and `then` functions are aliases to `it` function.
+
+`before`, `beforeEach`, `after` and `afterEach` functions are also provided.
 
 ### License
 
