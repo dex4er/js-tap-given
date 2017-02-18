@@ -4,7 +4,7 @@
 require('../lib/tap-given')
 require('chai').should()
 
-scenario('given-when-then basic scenario', function () {
+scenario('Given-When-Then basic scenario', function () {
   given('some property in current context', () => {
     this.property = 42
   })
@@ -18,7 +18,24 @@ scenario('given-when-then basic scenario', function () {
   })
 })
 
-scenario('given-when-then scenario with callbacks', function () {
+/* global before, beforeEach, after, afterEach */
+scenario('Given-When-Then scenario with callbacks', function () {
+  beforeEach(done => {
+    done()
+  })
+
+  afterEach(done => {
+    done()
+  })
+
+  before(done => {
+    done()
+  })
+
+  after(done => {
+    done()
+  })
+
   given('some property in current context with callback called when is done', done => {
     this.property = 42
     done()
