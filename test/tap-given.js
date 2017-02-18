@@ -1,7 +1,8 @@
 'use strict'
 
 /* global scenario, given, when, then */
-require('../lib/tap-given')
+const t = require('tap')
+require('../lib/tap-given')(t)
 require('chai').should()
 
 scenario('Given-When-Then basic scenario', function () {

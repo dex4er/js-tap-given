@@ -1,5 +1,6 @@
 /* global scenario, given, when, then */
-require('tap-given')
+const t = require('tap')
+require('tap-given')(t)
 require('chai').should()
 
 scenario('Given-When-Then scenario', function () {

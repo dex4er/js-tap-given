@@ -1,6 +1,6 @@
 {
   "name": "tap-given",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Given-When-Then BDD for TAP",
   "main": "lib/tap-given.js",
   "repository": {
@@ -24,13 +24,12 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "dependencies": {
-    "tap": "^10.1.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
     "nyc": "^10.1.2",
-    "standard": "^8.6.0"
+    "standard": "^8.6.0",
+    "tap": "^10.1.2"
   },
   "scripts": {
     "test": "tap --timeout 20 test/*.js",
