@@ -39,7 +39,6 @@
   },
   "nyc": {
     "exclude": [
-      "mock"
     ]
   }
 }
