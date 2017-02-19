@@ -1,6 +1,6 @@
 {
   "name": "tap-given",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Given-When-Then BDD for TAP",
   "main": "lib/tap-given.js",
   "repository": {
@@ -38,7 +38,6 @@
     "test-standard-coverage": "npm run test-standard && npm run test-coverage"
   },
   "nyc": {
-    "exclude": [
-    ]
+    "exclude": []
   }
 }

@@ -17,23 +17,25 @@ npm install tap-given
 __Given__ `examples/test.js` file:
 
 ```js
-/* global scenario, given, when, then */
+/* global Feature, Scenario, Given, When, Then */
 const t = require('tap')
 require('tap-given')(t)
 require('chai').should()
 
-scenario('Given-When-Then scenario', function () {
-  given('some property in current context', () => {
-    this.property = 42
-  })
+Feature('Test script', () => {
+  Scenario('Given-When-Then scenario', function () {
+    Given('some property in current context', () => {
+      this.property = 42
+    })
 
-  when('I do something with the property in current context', () => {
-    this.property /= 2
-  })
+    When('I do something with the property in current context', () => {
+      this.property /= 2
+    })
 
-  then('the property in current context has correct value', done => {
-    this.property.should.equal(21)
-    done()
+    Then('the property in current context has correct value', done => {
+      this.property.should.equal(21)
+      done()
+    })
   })
 })
 ```
@@ -48,22 +50,31 @@ __Then__ following output is produced:
 
 ```
 examples/test.js
-  Given-When-Then scenario
-    ✓ Given some property in current context
-    ✓ When I do something with the property in current context
-    ✓ Then the property in current context has correct value
+  Feature: Test script
+    Scenario: Given-When-Then scenario
+      ✓ Given some property in current context
+      ✓ When I do something with the property in current context
+      ✓ Then the property in current context has correct value
 
 
-  3 passing (230.343ms)
+  3 passing (234.754ms)
 ```
 
 ### Functions
 
-`scenario` function is an alias to `context` function.
+`Feature` function is an alias to `describe` function and might be optional.
 
-`given`, `when` and `then` functions are aliases to `it` function.
+`Scenario` function is an alias to `context` function. It usually provides a
+context for its steps then real `function () {}` should be used instead arrow
+`() => {}` notation.
 
-`before`, `beforeEach`, `after` and `afterEach` functions are also provided.
+`Given`, `When` and `Then` functions are aliases to `it` function.
+
+`Before`, `beforeEach`, `After` and `afterEach` functions are also provided
+and are optional.
+
+All functions (except `scenario` and `...Each`) add some prefix to the
+description of the step.
 
 ### License
 
