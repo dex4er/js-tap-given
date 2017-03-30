@@ -37,6 +37,10 @@
     "test-coverage": "npm test -- --coverage",
     "test-onchange-lcovonly": "npm run -s test-coverage -- -R min --coverage-report lcovonly; onchange '**/*.js' -- npm run -s test-coverage -- -R min --coverage-report lcovonly"
   },
+  "files": [
+    "lib/",
+    "index.js"
+  ],
   "nyc": {
     "exclude": []
   }
