@@ -1,3 +1,5 @@
+'use strict'
+
 const t = require('tap')
 require('../lib/tap-given')(t)
 require('chai').should()
