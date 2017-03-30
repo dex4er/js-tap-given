@@ -1,1 +1,1 @@
-require('./lib/tap-given')
+module.exports = require('./lib/tap-given')
