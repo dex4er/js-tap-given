@@ -17,24 +17,29 @@ npm install tap-given
 __Given__ `examples/test.js` file:
 
 ```js
-/* global Feature, Scenario, Given, When, Then */
+/* global Feature, Scenario, Given, When, Then, And */
 const t = require('tap')
 require('tap-given')(t)
 require('chai').should()
 
 Feature('Test script', () => {
-  Scenario('Given-When-Then scenario', function () {
-    Given('some property in current context', () => {
-      this.property = 42
+  Scenario('Given-When-Then scenario', () => {
+    let a, b, c
+
+    Given('first value', () => {
+      a = 2
     })
 
-    When('I do something with the property in current context', () => {
-      this.property /= 2
+    And('second value', () => {
+      b = 21
     })
 
-    Then('the property in current context has correct value', done => {
-      this.property.should.equal(21)
-      done()
+    When('I do multiplication operation', () => {
+      c = a * b
+    })
+
+    Then('the result is correct', () => {
+      c.should.equal(42)
     })
   })
 })
@@ -52,12 +57,13 @@ __Then__ following output is produced:
 examples/test.js
   Feature: Test script
     Scenario: Given-When-Then scenario
-      ✓ Given some property in current context
-      ✓ When I do something with the property in current context
-      ✓ Then the property in current context has correct value
+      ✓ Given first value
+      ✓ And second value
+      ✓ When I do multiplication operation
+      ✓ Then the result is correct
 
 
-  3 passing (234.754ms)
+  4 passing (233.031ms)
 ```
 
 ### Functions
@@ -68,12 +74,12 @@ examples/test.js
 context for its steps then real `function () {}` should be used instead arrow
 `() => {}` notation.
 
-`Given`, `When` and `Then` functions are aliases to `it` function.
+`Given`, `When`, `Then` and `And` functions are aliases to `it` function.
 
 `Before`, `beforeEach`, `After` and `afterEach` functions are also provided
 and are optional.
 
-All functions (except `scenario` and `...Each`) add some prefix to the
+All functions except `BeforeEach` and `AfterEach` add some prefix to the
 description of the step.
 
 ### License

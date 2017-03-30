@@ -1,36 +1,42 @@
 'use strict'
 
-/* global Feature, Scenario, Given, When, Then */
+/* global Feature, Scenario, Given, When, Then, And */
 const t = require('tap')
 require('../lib/tap-given')(t)
 require('chai').should()
 
 Feature('Test tap-given module', () => {
-  Scenario('Given-When-Then basic scenario', function () {
-    Given('some property in current context', () => {
-      this.property = 42
+  Scenario('Given-When-Then basic scenario', () => {
+    let a, b, c
+
+    Given('first value', () => {
+      a = 2
     })
 
-    When('I do something with property in current context', () => {
-      this.property /= 2
+    And('second value', () => {
+      b = 21
     })
 
-    Then('property in current context has correct value', () => {
-      this.property.should.equal(21)
+    When('I do multiplication operation', () => {
+      c = a * b
+    })
+
+    Then('the result is correct', () => {
+      c.should.equal(42)
     })
   })
 
   /* global Before, BeforeEach, After, AfterEach */
-  Scenario('Given-When-Then scenario with callbacks', function () {
+  Scenario('Given-When-Then scenario with callbacks and before/after hooks', () => {
+    Before('do something', done => {
+      done()
+    })
+
     BeforeEach(done => {
       done()
     })
 
     AfterEach(done => {
-      done()
-    })
-
-    Before('do something', done => {
       done()
     })
 

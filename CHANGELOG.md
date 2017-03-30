@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.0 2017-03-30
+
+  * `And` function
+
 ## v0.2.0 2017-02-19
 
   * Capital letter for functions (like for cucumber-js)

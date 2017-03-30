@@ -1,21 +1,26 @@
-/* global Feature, Scenario, Given, When, Then */
+/* global Feature, Scenario, Given, When, Then, And */
 const t = require('tap')
-require('tap-given')(t)
+require('../lib/tap-given')(t)
 require('chai').should()
 
 Feature('Test script', () => {
-  Scenario('Given-When-Then scenario', function () {
-    Given('some property in current context', () => {
-      this.property = 42
+  Scenario('Given-When-Then scenario', () => {
+    let a, b, c
+
+    Given('first value', () => {
+      a = 2
     })
 
-    When('I do something with the property in current context', () => {
-      this.property /= 2
+    And('second value', () => {
+      b = 21
     })
 
-    Then('the property in current context has correct value', done => {
-      this.property.should.equal(21)
-      done()
+    When('I do multiplication operation', () => {
+      c = a * b
+    })
+
+    Then('the result is correct', () => {
+      c.should.equal(42)
     })
   })
 })
