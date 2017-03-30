@@ -79,7 +79,7 @@ examples/test.js
 `Feature` function is an alias to `describe` function and might be optional.
 
 `Scenario` function is an alias to `context` function. It usually provides a
-context for its steps then real `function () {}` should be used instead arrow
+context for its steps then real `function () {}` might be used instead arrow
 `() => {}` notation.
 
 `Given`, `When`, `Then` and `And` functions are aliases to `it` function.
