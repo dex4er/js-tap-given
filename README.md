@@ -6,6 +6,10 @@ This module provides [tap](https://www.npmjs.com/package/tap) API with
 [Mocha-like DLS](http://www.node-tap.org/mochalike/) as Given-When-Then style
 for BDD tests.
 
+### Requirements
+
+This module requires Node >= 4.
+
 ### Installation
 
 ```shell
