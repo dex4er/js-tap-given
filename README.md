@@ -25,7 +25,6 @@ __Scenario__: Basic scenario
 __Given__ `examples/test.js` file:
 
 ```js
-/* global Feature, Scenario, Given, When, Then, And */
 const t = require('tap')
 require('tap-given')(t)
 require('chai').should()
@@ -89,6 +88,59 @@ and are optional.
 
 All functions except `BeforeEach` and `AfterEach` add some prefix to the
 description of the step.
+
+### Linter
+
+Install `eslint-plugin-tap-given` module and use in `package.json`:
+
+```js
+{
+  "standard": {
+    "plugins": [ "tap-given" ],
+    "env": [ "tap-given/tap-given" ]
+  }
+}
+```
+
+or:
+
+```js
+{
+  "eslintConfig": {
+    "plugins": [ "tap-given" ],
+    "env": {
+      "tap-given/tap-given": true
+    }
+  }
+}
+```
+
+Without plugin:
+
+```js
+{
+  "standard": {
+    "globals": [
+      "After",
+      "AfterEach",
+      "And",
+      "Before",
+      "BeforeEach",
+      "Feature",
+      "Given",
+      "Scenario",
+      "Then",
+      "When"
+    ]
+  }
+}
+```
+
+or:
+
+```js
+/* global Feature, Scenario, Given, When, Then, And, Before, BeforeEach, After, AfterEach */
+```
 
 ### License
 

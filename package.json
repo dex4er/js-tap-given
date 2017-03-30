@@ -41,6 +41,20 @@
     "lib/",
     "index.js"
   ],
+  "standard": {
+    "globals": [
+      "After",
+      "AfterEach",
+      "And",
+      "Before",
+      "BeforeEach",
+      "Feature",
+      "Given",
+      "Scenario",
+      "Then",
+      "When"
+    ]
+  },
   "nyc": {
     "exclude": []
   }

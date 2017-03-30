@@ -1,4 +1,3 @@
-/* global Feature, Scenario, Given, When, Then, And */
 const t = require('tap')
 require('../lib/tap-given')(t)
 require('chai').should()
