@@ -14,6 +14,10 @@ npm install tap-given
 
 ### Usage
 
+__Feature__: TDD in Given-When-Then style
+
+__Scenario__: Basic scenario
+
 __Given__ `examples/test.js` file:
 
 ```js
@@ -22,8 +26,8 @@ const t = require('tap')
 require('tap-given')(t)
 require('chai').should()
 
-Feature('Test script', () => {
-  Scenario('Given-When-Then scenario', () => {
+Feature('TDD in Given-When-Then style for TAP', () => {
+  Scenario('Basic scenario', () => {
     let a, b, c
 
     Given('first value', () => {
@@ -55,8 +59,8 @@ __Then__ following output is produced:
 
 ```
 examples/test.js
-  Feature: Test script
-    Scenario: Given-When-Then scenario
+  Feature: TDD in Given-When-Then style for TAP
+    Scenario: Basic scenario
       ✓ Given first value
       ✓ And second value
       ✓ When I do multiplication operation

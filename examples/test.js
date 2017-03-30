@@ -3,8 +3,8 @@ const t = require('tap')
 require('../lib/tap-given')(t)
 require('chai').should()
 
-Feature('Test script', () => {
-  Scenario('Given-When-Then scenario', () => {
+Feature('TDD in Given-When-Then style for TAP', () => {
+  Scenario('Basic scenario', () => {
     let a, b, c
 
     Given('first value', () => {

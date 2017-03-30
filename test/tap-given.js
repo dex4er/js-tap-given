@@ -1,6 +1,6 @@
 'use strict'
 
-/* global Feature, Scenario, Given, When, Then, And */
+/* global Feature, Scenario, Given, When, Then, And, Before, BeforeEach, After, AfterEach */
 const t = require('tap')
 require('../lib/tap-given')(t)
 require('chai').should()
@@ -26,7 +26,6 @@ Feature('Test tap-given module', () => {
     })
   })
 
-  /* global Before, BeforeEach, After, AfterEach */
   Scenario('Given-When-Then scenario with callbacks and before/after hooks', () => {
     Before('do something', done => {
       done()
