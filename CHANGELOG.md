@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.0 2017-04-10
+
+  * Extra spaces before keywords.
+
 ## v0.3.0 2017-03-30
 
   * `And` function

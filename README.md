@@ -65,9 +65,9 @@ examples/test.js
   Feature: TDD in Given-When-Then style for TAP
     Scenario: Basic scenario
       ✓ Given first value
-      ✓ And second value
-      ✓ When I do multiplication operation
-      ✓ Then the result is correct
+      ✓   ‎‎And second value
+      ✓  ‎When I do multiplication operation
+      ✓  ‎Then the result is correct
 
 
   4 passing (233.031ms)
