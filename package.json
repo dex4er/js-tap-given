@@ -1,6 +1,6 @@
 {
   "name": "tap-given",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Given-When-Then BDD for TAP",
   "main": "lib/tap-given.js",
   "repository": {
@@ -26,11 +26,11 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "chai": "^3.5.0",
-    "nyc": "^10.2.0",
+    "chai": "^4.0.2",
+    "nyc": "^11.0.2",
     "snazzy": "^7.0.0",
-    "standard": "^10.0.1",
-    "tap": "^10.3.2"
+    "standard": "^10.0.2",
+    "tap": "^10.5.1"
   },
   "scripts": {
     "test": "standard --verbose | snazzy && tap test/*.js",
