@@ -33,7 +33,7 @@ require('chai').should()
 //
 // import * as chai from 'chai'
 // import * as tap from 'tap'
-// import tapGiven = require('tap-given')
+// import { tapGiven } from 'tap-given'
 //
 // tapGiven(tap)
 // chai.should()

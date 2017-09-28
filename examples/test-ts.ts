@@ -1,6 +1,6 @@
 import * as chai from 'chai'
 import * as tap from 'tap'
-import tapGiven = require('../lib/tap-given')
+import { tapGiven } from '../lib/tap-given'
 
 tapGiven(tap)
 chai.should()

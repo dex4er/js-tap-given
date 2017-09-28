@@ -13,6 +13,5 @@ declare global {
 
 import * as tap from 'tap'
 
-declare function tapGiven (t: typeof tap): void
-
-export = tapGiven
+export function tapGiven (t: typeof tap): void
+export default function tapGiven (t: typeof tap): void
