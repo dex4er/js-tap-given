@@ -29,15 +29,6 @@ const t = require('tap')
 require('tap-given')(t)
 require('chai').should()
 
-// For Typescript:
-//
-// import * as chai from 'chai'
-// import * as tap from 'tap'
-// import { tapGiven } from 'tap-given'
-//
-// tapGiven(tap)
-// chai.should()
-
 Feature('TDD in Given-When-Then style for TAP', () => {
   Scenario('Basic scenario', () => {
     let a, b, c
@@ -97,6 +88,16 @@ and are optional.
 
 All functions except `BeforeEach` and `AfterEach` add some prefix to the
 description of the step.
+
+### Typescript
+
+Use following syntax instead `require`:
+
+```js
+import * as tap from 'tap'
+import { tapGiven } from 'tap-given'
+tapGiven(tap)
+```
 
 ### Linter
 
