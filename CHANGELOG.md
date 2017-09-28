@@ -2,7 +2,7 @@
 
 ## v0.5.0 2017-09-28
 
-  *
+  * Typings for Typescript
 
 ## v0.4.1 2017-06-22
 
