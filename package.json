@@ -3,6 +3,7 @@
   "version": "0.5.0",
   "description": "Given-When-Then BDD for TAP",
   "main": "lib/tap-given.js",
+  "typings": "lib/tap-given.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/dex4er/js-tap-given"
