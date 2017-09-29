@@ -93,7 +93,7 @@ description of the step.
 
 Use following syntax instead `require`:
 
-```js
+```ts
 import * as tap from 'tap'
 import { tapGiven } from 'tap-given'
 tapGiven(tap)

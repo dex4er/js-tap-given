@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.1 2017-09-29
+
+  * Pack only necessary files.
+
 ## v0.5.0 2017-09-28
 
   * Typings for Typescript
