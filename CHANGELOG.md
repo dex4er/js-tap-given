@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.2 2017-09-29
+
+  * For `Before` and `After` first argument is optional.
+
 ## v0.5.1 2017-09-29
 
   * Pack only necessary files.

@@ -6,7 +6,9 @@ declare global {
   function Then (what: string, how: () => any): any
   function And (what: string, how: () => any): any
   function Before (what: string, how: () => any): any
+  function Before (how: () => any): any
   function After (what: string, how: () => any): any
+  function After (how: () => any): any
   function BeforeEach (how: () => any): any
   function AfterEach (how: () => any): any
 }
