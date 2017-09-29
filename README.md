@@ -86,6 +86,8 @@ context for its steps then real `function () {}` might be used instead arrow
 `Before`, `beforeEach`, `After` and `afterEach` functions are also provided
 and are optional.
 
+For `Before` and `After` functions the first argument is optional.
+
 All functions except `BeforeEach` and `AfterEach` add some prefix to the
 description of the step.
 
